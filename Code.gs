@@ -18,7 +18,7 @@ function openSS_(){ return SpreadsheetApp.getActive(); }
 
 function sheetUrlByIdAndName_(docId, sheetName) {
   const ss = SpreadsheetApp.openById(docId);
-  if (!sheetName) return `https://docs.google.com/spreadsheets/d/${docId}/edit`;
+  if (!sheetName) return `https://docs.google.com/spreadsheets/d/1DS3mhIY_AXIJvD2tpV-S1HXTpAO4suLc1PVtEXL0tMM/edit`;
   const sh = ss.getSheetByName(sheetName);
   if (!sh) throw new Error('Лист не найден: ' + sheetName);
   return `https://docs.google.com/spreadsheets/d/${docId}/edit#gid=${sh.getSheetId()}`;
